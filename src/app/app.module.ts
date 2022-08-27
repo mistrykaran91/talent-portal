@@ -11,19 +11,21 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { PersonalInformationComponent } from './personal-information/personal-information.component';
+import { ProspectComponent } from './prospect/prospect.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, PersonalInformationComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, PersonalInformationComponent, ProspectComponent],
   imports: [BrowserModule, BrowserAnimationsModule, SharedModule, MaterialModule, HttpClientModule, AppRoutingModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry
-    .addSvgIcon('back', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/back.svg'))
-    .addSvgIcon('average', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/average.svg'))
-    .addSvgIcon('good', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/good.svg'))
-    .addSvgIcon('rework', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/rework.svg'))
-
+      .addSvgIcon('back', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/back.svg'))
+      .addSvgIcon('average', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/average.svg'))
+      .addSvgIcon('good', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/good.svg'))
+      .addSvgIcon('rework', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/rework.svg'))
+      .addSvgIcon('dropdown', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/dropdown.svg'))
+      .addSvgIcon('calendar', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/dropdown.svg'));
   }
 }

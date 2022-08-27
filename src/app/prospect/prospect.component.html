@@ -2,21 +2,28 @@
   <app-personal-information></app-personal-information>
 
   <div fxLayout="column" class="label-control">
-    <span class="label-text">Offer Extended on</span>
+    <mat-icon svgIcon="good"></mat-icon>
+    <span>Hire</span>
     <div class="label-value">
       {{ '21 Jul 2020' }}
     </div>
   </div>
 
   <div fxLayout="column" class="label-control">
-    <span class="label-text">Offer Accepted on</span>
+    <span class="label-text">Awaiting Feedback</span>
+  </div>
+
+  <div fxLayout="column" class="label-control">
+    <mat-icon svgIcon="good"></mat-icon>
+    <span>Hire</span>
     <div class="label-value">
-      {{ '23 Jul 2020' }}
+      {{ '21 Jul 2020' }}
     </div>
   </div>
 
   <div fxLayout="column" class="label-control">
-    <span class="label-text">Date of Joining</span>
+    <mat-icon svgIcon="calendar"></mat-icon>
+
     <div class="label-value">
       {{ '21 Jul 2020' }}
     </div>
@@ -38,7 +45,7 @@
     </a>
   </div>
 </div>
-<app-prospect></app-prospect>
+
 <mat-menu #joiningStatusList="matMenu">
   <button mat-menu-item class="mat-icon-button">
     <mat-icon svgIcon="good"></mat-icon>
