@@ -9,13 +9,23 @@ import { HeaderComponent } from './header/header.component';
 import { SharedModule } from './shared/shared.module';
 import { MatIconRegistry } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { PersonalInformationComponent } from './personal-information/personal-information.component';
 import { ProspectComponent } from './prospect/prospect.component';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { AppData } from './db';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, PersonalInformationComponent, ProspectComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, SharedModule, MaterialModule, HttpClientModule, AppRoutingModule],
+  declarations: [AppComponent, HeaderComponent, DashboardComponent, PersonalInformationComponent, ProspectComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    SharedModule,
+    MaterialModule,
+    HttpClientModule,
+    AppRoutingModule,
+    InMemoryWebApiModule.forRoot(AppData, { passThruUnknownUrl: true, delay: 500 })
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
