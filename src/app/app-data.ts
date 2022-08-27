@@ -2,7 +2,6 @@ import { CandidateStatus } from './enums/candidate-status.enum';
 import { JoiningStatus } from './enums/joining-status.enum';
 import { Candidature } from './models/candidature.model';
 
-
 export class CandidatureData {
   static candidates: Candidature[] = [
     {
@@ -51,12 +50,12 @@ export class CandidatureData {
         {
           roundNumber: 3,
           status: CandidateStatus.ON_HOLD,
-          scheduledOn: new Date(2020, 8, 1)
+          scheduledOn: new Date(2018, 6, 1)
         },
         {
           roundNumber: 4,
           status: null,
-          scheduledOn: new Date(2020, 8, 1)
+          scheduledOn: new Date(2018, 6, 1)
         }
       ],
       referenceCheck: {

@@ -1,6 +1,14 @@
-<app-offer-extended *ngIf="offerExtendedCandidature$ | async" [candidatures]="offerExtendedCandidature$ | async"></app-offer-extended>
+<div fxLayout="column" fxLayoutGap="32px" class="dashboard-container">
+  <app-offer-extended *ngIf="offerExtendedCandidature$ | async" [candidatures]="offerExtendedCandidature$ | async">
+  </app-offer-extended>
 
-<div fxFlex fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+  <app-prospect-container
+    *ngIf="prospectCandidature$ | async"
+    [candidatures]="prospectCandidature$ | async"
+  ></app-prospect-container>
+</div>
+
+<!-- <div fxFlex fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
   <app-personal-information></app-personal-information>
 
   <div fxLayout="column" class="label-control">
@@ -54,4 +62,4 @@
   <button mat-menu-item class="mat-icon-button">
     <mat-icon svgIcon="rework"></mat-icon>
   </button>
-</mat-menu>
+</mat-menu> -->

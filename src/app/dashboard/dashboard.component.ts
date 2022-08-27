@@ -15,9 +15,9 @@ export class DashboardComponent {
     map(allCandidature => allCandidature.filter(c => c.candidateStatus === CandidateStatus.HIRED))
   );
 
-  constructor(private candidatureService: CandidatureService) {
-    this.offerExtendedCandidature$.subscribe(r => {
-      debugger;
-    });
-  }
+  prospectCandidature$ = this.allCandidature$.pipe(
+    map(allCandidature => allCandidature.filter(c => c.candidateStatus === CandidateStatus.IN_PROGRESS))
+  );
+
+  constructor(private candidatureService: CandidatureService) {}
 }

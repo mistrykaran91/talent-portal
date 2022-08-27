@@ -2,10 +2,10 @@
   <div class="section-header">Offer Extended</div>
 
   <div fxFlex class="app-container" *ngFor="let candidature of candidatures">
-    <div fxLayout="row" fxLayoutGap="48px" fxLayoutAlign="start center">
+    <div fxLayout="row" fxLayoutAlign="start start">
       <app-personal-information></app-personal-information>
 
-      <div fxLayout="row" fxLayoutGap="16px">
+      <div fxLayout="row" class="pad-24">
         <div fxLayout="column" class="label-control">
           <span>Offer Extended on</span>
           <div>
@@ -13,6 +13,67 @@
           </div>
         </div>
       </div>
+
+      <div fxLayout="row" class="pad-24">
+        <div fxLayout="column" class="label-control">
+          <span>Offer Accepted on</span>
+          <div>
+            {{ candidature.candidatureOffer.acceptedOn | date: 'dd MMM yyyy' }}
+          </div>
+        </div>
+      </div>
+
+      <div fxLayout="row" class="pad-24">
+        <div fxLayout="column" class="label-control">
+          <span>Offer Accepted on</span>
+          <div>
+            {{ candidature.candidatureOffer.dateOfJoining | date: 'dd MMM yyyy' }}
+          </div>
+        </div>
+      </div>
+
+      <div fxLayout="row" class="pad-24">
+        <div fxLayout="column" class="label-control">
+          <span>Joining Status</span>
+          <button class="mat-icon-button" [matMenuTriggerFor]="joiningStatusList">
+            <div fxLayout="row" fxLayoutGap="8px">
+              <mat-icon svgIcon="good"></mat-icon>
+              <mat-icon svgIcon="dropdown"></mat-icon>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div fxLayout="row" class="pad-24">
+        <div fxLayout="column" class="label-control">
+          <span>B.V</span>
+          <button class="mat-icon-button" [matMenuTriggerFor]="joiningStatusList">
+            <div fxLayout="row" fxLayoutGap="8px">
+              <mat-icon svgIcon="good"></mat-icon>
+              <mat-icon svgIcon="dropdown"></mat-icon>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div fxFlex fxLayout="row" class="pad-24">
+        <span class="comment-label">{{ candidature.comment }}</span>
+      </div>
     </div>
   </div>
+
+  <mat-menu #joiningStatusList="matMenu">
+    <button mat-menu-item class="mat-icon-button">
+      <mat-icon svgIcon="good"></mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+
+    <button mat-menu-item class="mat-icon-button">
+      <mat-icon svgIcon="average"></mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item class="mat-icon-button">
+      <mat-icon svgIcon="rework"></mat-icon>
+    </button>
+  </mat-menu>
 </div>

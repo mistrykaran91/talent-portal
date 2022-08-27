@@ -1,32 +1,38 @@
 <div fxFlex fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
-  <app-personal-information></app-personal-information>
+  <app-personal-information fxFlex="25"></app-personal-information>
 
-  <div fxLayout="column" class="label-control">
-    <mat-icon svgIcon="good"></mat-icon>
-    <span>Hire</span>
-    <div class="label-value">
-      {{ '21 Jul 2020' }}
+  <div fxLayout="row" fxFlex="30">
+    <ng-container *ngFor="let interviewRound of candidature.interviewRound">
+      <app-interview-round [interviewRound]="interviewRound"></app-interview-round>
+    </ng-container>
+
+    <!-- <div fxLayout="column" class="label-control">
+      <mat-icon svgIcon="good"></mat-icon>
+      <span>Hire</span>
+      <div class="label-value">
+        {{ '21 Jul 2020' }}
+      </div>
+    </div> -->
+
+    <!-- <div fxLayout="column" class="label-control">
+      <span class="label-text">Awaiting Feedback</span>
     </div>
-  </div>
 
-  <div fxLayout="column" class="label-control">
-    <span class="label-text">Awaiting Feedback</span>
-  </div>
-
-  <div fxLayout="column" class="label-control">
-    <mat-icon svgIcon="good"></mat-icon>
-    <span>Hire</span>
-    <div class="label-value">
-      {{ '21 Jul 2020' }}
+    <div fxLayout="column" class="label-control">
+      <mat-icon svgIcon="good"></mat-icon>
+      <span>Hire</span>
+      <div class="label-value">
+        {{ '21 Jul 2020' }}
+      </div>
     </div>
-  </div>
 
-  <div fxLayout="column" class="label-control">
-    <mat-icon svgIcon="calendar"></mat-icon>
+    <div fxLayout="column" class="label-control">
+      <mat-icon svgIcon="calendar"></mat-icon>
 
-    <div class="label-value">
-      {{ '21 Jul 2020' }}
-    </div>
+      <div class="label-value">
+        {{ '21 Jul 2020' }}
+      </div>
+    </div> -->
   </div>
 
   <div fxLayout="column" class="label-control">

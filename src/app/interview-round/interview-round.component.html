@@ -1,0 +1,9 @@
+<div fxLayout="column" class="label-control">
+  <mat-icon *ngIf="interviewRoundIcon" [svgIcon]="interviewRoundIcon"></mat-icon>
+
+  <span *ngIf="interviewRoundLabel">{{ interviewRoundLabel }}</span>
+  <div *ngIf="interviewRound.scheduledOn" class="label-value">
+    <mat-icon *ngIf="!(interviewRoundIcon && interviewRoundLabel)" svgIcon="calendar"></mat-icon>
+    {{ interviewRound.scheduledOn | date: 'dd MMM yyyy' }}
+  </div>
+</div>

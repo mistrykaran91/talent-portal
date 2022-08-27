@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Candidature } from 'src/app/models/candidature.model';
 
 @Component({
   selector: 'app-prospect',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./prospect.component.scss']
 })
 export class ProspectComponent {
-  title = 'Personal component';
+  @Input()
+  candidature: Candidature;
 }

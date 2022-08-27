@@ -11,10 +11,12 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PersonalInformationComponent } from './personal-information/personal-information.component';
-import { ProspectComponent } from './prospect/prospect.component';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppData } from './db';
 import { OfferExtendedComponent } from './offer-extended/offer-extended.component';
+import { ProspectComponent } from './prospect-container/prospect/prospect.component';
+import { ProspectContainerComponent } from './prospect-container/prospect-container.component';
+import { InterviewRoundComponent } from './interview-round/interview-round.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { OfferExtendedComponent } from './offer-extended/offer-extended.componen
     DashboardComponent,
     PersonalInformationComponent,
     ProspectComponent,
-    OfferExtendedComponent
+    ProspectContainerComponent,
+    OfferExtendedComponent,
+    InterviewRoundComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,9 @@ export class AppModule {
       .addSvgIcon('good', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/good.svg'))
       .addSvgIcon('rework', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/rework.svg'))
       .addSvgIcon('dropdown', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/dropdown.svg'))
-      .addSvgIcon('calendar', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/dropdown.svg'));
+      .addSvgIcon('like', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/like.svg'))
+      .addSvgIcon('dislike', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/dislike.svg'))
+      .addSvgIcon('unselected', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/unselected.svg'))
+      .addSvgIcon('calendar', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/calendar.svg'));
   }
 }

@@ -1,0 +1,18 @@
+<div fxLayout="column" fxLayoutGap="24px">
+  <div class="section-header">Prospects</div>
+
+  <div fxLayout="row" class="app-container prospect-table-header">
+    <div fxFlex="25">Candidate Details</div>
+    <div fxFlex="30">Interview schedule</div>
+    <div fxFlex="20">Reference Check</div>
+    <div fxFlex="25">comments</div>
+  </div>
+
+  <div class="prospect-table-sub-header">
+    <div fxLayout="row" fxFlex="20" fxFlexOffset="55">
+      <div fxFlex="50">Leads</div>
+      <div fxFlex="50">Captured</div>
+    </div>
+  </div>
+  <app-prospect *ngFor="let candidature of candidatures" [candidature]="candidature"> </app-prospect>
+</div>
