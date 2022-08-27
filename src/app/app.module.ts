@@ -14,9 +14,17 @@ import { PersonalInformationComponent } from './personal-information/personal-in
 import { ProspectComponent } from './prospect/prospect.component';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppData } from './db';
+import { OfferExtendedComponent } from './offer-extended/offer-extended.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, DashboardComponent, PersonalInformationComponent, ProspectComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    DashboardComponent,
+    PersonalInformationComponent,
+    ProspectComponent,
+    OfferExtendedComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
