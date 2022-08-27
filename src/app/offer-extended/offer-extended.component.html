@@ -1,7 +1,18 @@
 <div fxLayout="column" fxLayoutGap="24px">
   <div class="section-header">Offer Extended</div>
 
-  <div fxFlex fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center" class="app-container">
-    <app-personal-information></app-personal-information>
+  <div fxFlex class="app-container" *ngFor="let candidature of candidatures">
+    <div fxLayout="row" fxLayoutGap="48px" fxLayoutAlign="start center">
+      <app-personal-information></app-personal-information>
+
+      <div fxLayout="row" fxLayoutGap="16px">
+        <div fxLayout="column" class="label-control">
+          <span>Offer Extended on</span>
+          <div>
+            {{ candidature.candidatureOffer.extendedOn | date: 'dd MMM yyyy' }}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

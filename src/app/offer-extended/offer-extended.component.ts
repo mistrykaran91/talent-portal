@@ -8,5 +8,6 @@ import { Candidature } from '../models/candidature.model';
 })
 export class OfferExtendedComponent {
   @Input()
-  candidature: Candidature;
+  candidatures: Candidature[];
+  
 }

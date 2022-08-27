@@ -1,11 +1,11 @@
-<app-offer-extended [candidature]="offerExtendedCandidature$ | async"></app-offer-extended>
+<app-offer-extended *ngIf="offerExtendedCandidature$ | async" [candidatures]="offerExtendedCandidature$ | async"></app-offer-extended>
 
 <div fxFlex fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
   <app-personal-information></app-personal-information>
 
   <div fxLayout="column" class="label-control">
-    <span class="label-text">Offer Extended on</span>
-    <div class="label-value">
+    <span>Offer Extended on</span>
+    <div>
       {{ '21 Jul 2020' }}
     </div>
   </div>
