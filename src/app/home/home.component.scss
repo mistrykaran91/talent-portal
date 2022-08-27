@@ -1,0 +1,25 @@
+:host {
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
+}
+
+.label-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #8a8a8a;
+}
+
+.label-value {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.label-control {
+  border-right: 1px solid #e6e6e6;
+  padding-right: 16px;
+}

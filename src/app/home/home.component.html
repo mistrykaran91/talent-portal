@@ -1,0 +1,44 @@
+<div fxFlex fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
+  <app-personal-information></app-personal-information>
+
+  <div fxLayout="column" class="label-control">
+    <span class="label-text">Offer Extended on</span>
+    <div class="label-value">
+      {{ '21 Jul 2020' }}
+    </div>
+  </div>
+
+  <div fxLayout="column" class="label-control">
+    <span class="label-text">Offer Accepted on</span>
+    <div class="label-value">
+      {{ '23 Jul 2020' }}
+    </div>
+  </div>
+
+  <div fxLayout="column" class="label-control">
+    <span class="label-text">Date of Joining</span>
+    <div class="label-value">
+      {{ '21 Jul 2020' }}
+    </div>
+  </div>
+
+  <div fxLayout="column" class="label-control">
+    <span class="label-text">Joining Status</span>
+    <a mat-button [matMenuTriggerFor]="joiningStatusList"> Masters <mat-icon>keyboard_arrow_down</mat-icon> </a>
+  </div>
+</div>
+
+<mat-menu #joiningStatusList="matMenu">
+  <button mat-menu-item color="primary" class="mat-icon-button">
+    <mat-icon>home</mat-icon>
+  </button>
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item color="primary" class="mat-icon-button">
+    <mat-icon>home</mat-icon>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item color="primary" class="mat-icon-button">
+    <mat-icon>home</mat-icon>
+  </button>
+</mat-menu>
