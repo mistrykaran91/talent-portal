@@ -5,7 +5,7 @@ import { PersonalInformation } from './personal-information.model';
 
 export interface Candidature {
   id: number;
-  candidate: PersonalInformation;
+  personalInformation: PersonalInformation;
   candidateStatus: CandidateStatus;
   interviewRound: InterviewRound[];
   referenceCheck: {

@@ -1,68 +1,30 @@
 <div fxFlex fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
-  <app-personal-information fxFlex="25"></app-personal-information>
+  <app-personal-information
+    fxFlex="25"
+    [personalInformation]="candidature.personalInformation"
+  ></app-personal-information>
 
-  <div fxLayout="row" fxFlex="30">
-    <ng-container *ngFor="let interviewRound of candidature.interviewRound">
-      <app-interview-round [interviewRound]="interviewRound"></app-interview-round>
-    </ng-container>
-
-    <!-- <div fxLayout="column" class="label-control">
-      <mat-icon svgIcon="good"></mat-icon>
-      <span>Hire</span>
-      <div class="label-value">
-        {{ '21 Jul 2020' }}
-      </div>
-    </div> -->
-
-    <!-- <div fxLayout="column" class="label-control">
-      <span class="label-text">Awaiting Feedback</span>
+  <div fxLayout="row" fxFlex="30" fxLayoutAlign="center center">
+    <div fxFlex="25" *ngFor="let interviewRound of candidature.interviewRound" class="interview-round-container">
+      <app-interview-round fxFlex fxFlexFill [interviewRound]="interviewRound"></app-interview-round>
     </div>
-
-    <div fxLayout="column" class="label-control">
-      <mat-icon svgIcon="good"></mat-icon>
-      <span>Hire</span>
-      <div class="label-value">
-        {{ '21 Jul 2020' }}
-      </div>
-    </div>
-
-    <div fxLayout="column" class="label-control">
-      <mat-icon svgIcon="calendar"></mat-icon>
-
-      <div class="label-value">
-        {{ '21 Jul 2020' }}
-      </div>
-    </div> -->
   </div>
 
-  <div fxLayout="column" class="label-control">
-    <span class="label-text">Joining Status</span>
-    <a mat-button [matMenuTriggerFor]="joiningStatusList">
-      <mat-icon svgIcon="good"></mat-icon>
-      <mat-icon svgIcon="dropdown"></mat-icon>
-    </a>
+  <div fxLayout="row" fxFlex="20" class="reference-container">
+    <div fxFlex="50" fxLayoutAlign="center center">{{ candidature.referenceCheck.leads }}</div>
+    <div fxFlex="50" fxLayoutAlign="center center">{{ candidature.referenceCheck.captured }}</div>
   </div>
 
-  <div fxLayout="column" class="label-control">
-    <span class="label-text">B.V</span>
-    <a mat-button [matMenuTriggerFor]="joiningStatusList">
-      <mat-icon svgIcon="good"></mat-icon>
-      <mat-icon svgIcon="dropdown"></mat-icon>
-    </a>
+  <div fxFlex="30" fxLayout="row" fxLayoutAlign="space-between start" class="comment-container">
+    <span class="comment-label">{{ candidature.comment }}</span>
+    <div>
+      <a [matMenuTriggerFor]="moreOption"> <mat-icon svgIcon="more"></mat-icon> </a>
+    </div>
   </div>
 </div>
 
-<mat-menu #joiningStatusList="matMenu">
-  <button mat-menu-item class="mat-icon-button">
-    <mat-icon svgIcon="good"></mat-icon>
-  </button>
+<mat-menu #moreOption="matMenu">
+  <button mat-menu-item>EDIT COMMENT</button>
   <mat-divider></mat-divider>
-
-  <button mat-menu-item class="mat-icon-button">
-    <mat-icon svgIcon="average"></mat-icon>
-  </button>
-  <mat-divider></mat-divider>
-  <button mat-menu-item class="mat-icon-button">
-    <mat-icon svgIcon="rework"></mat-icon>
-  </button>
+  <button mat-menu-item>HIDE CANDIDATE</button>
 </mat-menu>

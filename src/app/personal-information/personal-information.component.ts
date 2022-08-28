@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PersonalInformation } from '../models/personal-information.model';
 
 @Component({
   selector: 'app-personal-information',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./personal-information.component.scss']
 })
 export class PersonalInformationComponent {
-  title = 'Personal component';
+  @Input()
+  personalInformation: PersonalInformation;
+
+  get candidateName() {
+    return this.personalInformation
+      ? `${this.personalInformation.firstName} ${this.personalInformation.lastName}`
+      : null;
+  }
 }

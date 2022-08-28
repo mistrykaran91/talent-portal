@@ -6,7 +6,7 @@ export class CandidatureData {
   static candidates: Candidature[] = [
     {
       id: 1,
-      candidate: {
+      personalInformation: {
         firstName: 'Anil',
         lastName: 'Kapoor',
         designation: 'Director, Piramal Enterprises',
@@ -27,7 +27,7 @@ export class CandidatureData {
 
     {
       id: 2,
-      candidate: {
+      personalInformation: {
         firstName: 'Ankit',
         lastName: 'Joshi',
         designation: 'Director, Piramal Enterprises',
@@ -66,7 +66,7 @@ export class CandidatureData {
 
     {
       id: 3,
-      candidate: {
+      personalInformation: {
         firstName: 'Kunjan',
         lastName: 'Kumar',
         designation: 'Director, Housing and Development…',
@@ -105,7 +105,7 @@ export class CandidatureData {
 
     {
       id: 4,
-      candidate: {
+      personalInformation: {
         firstName: 'Kunal',
         lastName: 'Kamra',
         designation: 'Director, Piramal Enterprises',
@@ -144,7 +144,7 @@ export class CandidatureData {
 
     {
       id: 5,
-      candidate: {
+      personalInformation: {
         firstName: 'Ankit',
         lastName: 'Joshi',
         designation: 'Director, Piramal Enterprises',

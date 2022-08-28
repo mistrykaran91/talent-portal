@@ -36,7 +36,7 @@ import { InterviewRoundComponent } from './interview-round/interview-round.compo
     MaterialModule,
     HttpClientModule,
     AppRoutingModule,
-    InMemoryWebApiModule.forRoot(AppData, { passThruUnknownUrl: true, delay: 500 })
+    InMemoryWebApiModule.forRoot(AppData, { passThruUnknownUrl: true, delay: 100 })
   ],
   bootstrap: [AppComponent]
 })
@@ -51,6 +51,7 @@ export class AppModule {
       .addSvgIcon('like', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/like.svg'))
       .addSvgIcon('dislike', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/dislike.svg'))
       .addSvgIcon('unselected', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/unselected.svg'))
+      .addSvgIcon('more', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/more.svg'))
       .addSvgIcon('calendar', sanitizer.bypassSecurityTrustResourceUrl('../assets/icons/calendar.svg'));
   }
 }

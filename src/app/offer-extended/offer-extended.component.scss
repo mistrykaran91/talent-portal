@@ -1,13 +1,24 @@
-// :host {
-//   padding: 24px;
-// }
-
 .comment-label {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  /* or 133% */
-
   color: #8a8a8a;
+}
+
+.candidate-container {
+  height: 112px;
+  padding: 12px;
+}
+
+.offer-container {
+  > div {
+    height: 100%;
+    border-right: 1px solid #e6e6e6;
+    padding: 8px;
+  }
+}
+
+.comment-container {
+  padding: 12px;
 }

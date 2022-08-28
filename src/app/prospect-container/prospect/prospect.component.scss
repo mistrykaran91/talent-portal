@@ -25,3 +25,29 @@
   border-right: 1px solid #e6e6e6;
   padding-right: 16px;
 }
+
+.interview-round-container {
+  height: 72px;
+}
+
+.comment-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* or 133% */
+
+  color: #8a8a8a;
+}
+
+.reference-container div {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #2d2d2d;
+}
+
+.comment-container {
+  padding: 12px;
+}
