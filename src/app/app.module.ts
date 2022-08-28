@@ -17,6 +17,7 @@ import { OfferExtendedComponent } from './offer-extended/offer-extended.componen
 import { ProspectComponent } from './prospect-container/prospect/prospect.component';
 import { ProspectContainerComponent } from './prospect-container/prospect-container.component';
 import { InterviewRoundComponent } from './interview-round/interview-round.component';
+import { RejectedProspectComponent } from './rejected-prospect/rejected-prospect.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { InterviewRoundComponent } from './interview-round/interview-round.compo
     ProspectComponent,
     ProspectContainerComponent,
     OfferExtendedComponent,
-    InterviewRoundComponent
+    InterviewRoundComponent,
+    RejectedProspectComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutGap="24px">
+<div fxLayout="column" fxLayoutGap="24px" class="prospect-container" cdkDropList (cdkDropListDropped)="drop($event)">
   <div class="section-header">Prospects</div>
 
   <div fxLayout="row" class="app-container prospect-table-header">
@@ -14,5 +14,6 @@
       <div fxFlex="50">Captured</div>
     </div>
   </div>
-  <app-prospect *ngFor="let candidature of candidatures" [candidature]="candidature"> </app-prospect>
+  <app-prospect class="prospect-box" *ngFor="let candidature of candidatures" [candidature]="candidature" cdkDrag>
+  </app-prospect>
 </div>

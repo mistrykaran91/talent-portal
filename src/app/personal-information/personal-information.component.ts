@@ -15,4 +15,14 @@ export class PersonalInformationComponent {
       ? `${this.personalInformation.firstName} ${this.personalInformation.lastName}`
       : null;
   }
+
+  get avatarUrl() {
+    if (this.personalInformation) {
+      return this.personalInformation.avatarName
+        ? `../../assets/images/${this.personalInformation.avatarName}`
+        : `../../assets/images/avatar1.jpg`;
+    }
+
+    return null;
+  }
 }

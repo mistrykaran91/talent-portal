@@ -10,7 +10,8 @@ export class CandidatureData {
         firstName: 'Anil',
         lastName: 'Kapoor',
         designation: 'Director, Piramal Enterprises',
-        location: 'Kolkatta'
+        location: 'Kolkatta',
+        avatarName:'avatar1.jpg'
       },
       candidateStatus: CandidateStatus.HIRED,
       candidatureOffer: {
@@ -31,7 +32,8 @@ export class CandidatureData {
         firstName: 'Ankit',
         lastName: 'Joshi',
         designation: 'Director, Piramal Enterprises',
-        location: 'Mumbai'
+        location: 'Mumbai',
+        avatarName:'avatar1.jpg'
       },
       candidateStatus: CandidateStatus.IN_PROGRESS,
       candidatureOffer: null,
@@ -70,7 +72,8 @@ export class CandidatureData {
         firstName: 'Kunjan',
         lastName: 'Kumar',
         designation: 'Director, Housing and Development…',
-        location: 'New Delhi'
+        location: 'New Delhi',
+        avatarName:'avatar1.jpg'
       },
       candidateStatus: CandidateStatus.IN_PROGRESS,
       candidatureOffer: null,
@@ -109,7 +112,8 @@ export class CandidatureData {
         firstName: 'Kunal',
         lastName: 'Kamra',
         designation: 'Director, Piramal Enterprises',
-        location: 'Mumbai'
+        location: 'Mumbai',
+        avatarName:'avatar1.jpg'
       },
       candidateStatus: CandidateStatus.IN_PROGRESS,
       candidatureOffer: null,
@@ -148,7 +152,8 @@ export class CandidatureData {
         firstName: 'Ankit',
         lastName: 'Joshi',
         designation: 'Director, Piramal Enterprises',
-        location: 'Mumbai'
+        location: 'Mumbai',
+        avatarName:'avatar2.jpg'
       },
       candidateStatus: CandidateStatus.REJECTED,
       candidatureOffer: null,

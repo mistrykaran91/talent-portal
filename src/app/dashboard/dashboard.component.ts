@@ -19,5 +19,9 @@ export class DashboardComponent {
     map(allCandidature => allCandidature.filter(c => c.candidateStatus === CandidateStatus.IN_PROGRESS))
   );
 
+  rejectedCandidature$ = this.allCandidature$.pipe(
+    map(allCandidature => allCandidature.filter(c => c.candidateStatus === CandidateStatus.REJECTED))
+  );
+
   constructor(private candidatureService: CandidatureService) {}
 }

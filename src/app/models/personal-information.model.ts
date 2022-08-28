@@ -3,4 +3,5 @@ export interface PersonalInformation {
   lastName: string;
   designation: string;
   location: string;
+  avatarName: string;
 }

@@ -6,6 +6,9 @@
     *ngIf="prospectCandidature$ | async"
     [candidatures]="prospectCandidature$ | async"
   ></app-prospect-container>
+
+  <app-rejected-prospect-container *ngIf="rejectedCandidature$ | async" [candidatures]="rejectedCandidature$ | async">
+  </app-rejected-prospect-container>
 </div>
 
 <!-- <div fxFlex fxLayout="row" fxLayoutGap="16px" fxLayoutAlign="start center">
