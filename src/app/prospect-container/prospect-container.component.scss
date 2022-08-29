@@ -1,5 +1,4 @@
 @import 'brands/tokens';
-@import '../../styles.scss';
 
 .prospect-table-header {
   padding: $space-m;
@@ -14,7 +13,6 @@
 
 .prospect-table-sub-header {
   div {
-    @extend .small-label-font;
     font-size: $font-size-s;
     line-height: $line-height-s;
     text-align: center;
