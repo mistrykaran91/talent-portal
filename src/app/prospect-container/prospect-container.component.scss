@@ -3,7 +3,6 @@
 .prospect-table-header {
   padding: $space-m;
   div {
-    @extend .medium-label-font;
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
