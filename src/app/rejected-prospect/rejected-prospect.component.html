@@ -1,6 +1,6 @@
-<div fxLayout="column" fxLayoutGap="24px" class="prospect-container">
+<div fxLayout="column" fxLayoutGap="24px">
   <div class="section-header">Dropped</div>
 
-  <app-prospect class="prospect-box" *ngFor="let candidature of candidatures" [candidature]="candidature">
+  <app-prospect *ngFor="let candidature of candidatures" [candidature]="candidature">
   </app-prospect>
 </div>

@@ -1,9 +1,11 @@
+@import 'brands/tokens';
+
 :host {
   display: flex;
-  margin: 48px;
+  margin: $space-xxxl;
   flex-direction: column;
 }
 
 .dashboard-container {
-  padding: 24px;
+  padding: $space-xl;
 }

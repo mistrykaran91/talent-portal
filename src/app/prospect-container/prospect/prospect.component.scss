@@ -1,55 +1,31 @@
+@import 'brands/tokens';
+
 :host {
-  background: #ffffff;
-  border: 1px solid #f3f3f3;
+  background: $color-white;
+  border: 1px solid $color-border-gray;
   display: flex;
   flex-direction: column;
 }
 
-.label-text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: #8a8a8a;
-}
-
-.label-value {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: left;
-}
-
 .label-control {
-  border-right: 1px solid #e6e6e6;
-  padding-right: 16px;
+  border-right: 1px solid $color-border-gray-2;
+  padding-right: $space-l;
 }
 
 .interview-round-container {
   height: 72px;
 }
 
-.comment-label {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  /* or 133% */
-
-  color: #8a8a8a;
-}
-
 .reference-container div {
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: #2d2d2d;
+  font-weight: $font-weight-light;
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
+  color: $color-dark-font;
 }
 
 .comment-container {
-  padding: 12px;
+  padding: $space-m;
 }
 
 a {

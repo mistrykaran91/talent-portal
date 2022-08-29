@@ -1,12 +1,14 @@
+@import 'brands/tokens';
+
 .mat-toolbar.mat-primary {
-  background: #ffffff;
-  box-shadow: 0px 3px 8px 0px #75757515;
+  background: $color-white;
+  box-shadow: 0px 3px 8px 0px $color-dark-font;
 }
 
 .header-title {
   font-style: normal;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 22px;
-  color: #2d2d2d;
+  font-weight: $font-weight-large;
+  font-size: $font-size-l;
+  line-height: $line-height-l;
+  color: $color-dark-font;
 }

@@ -1,26 +1,25 @@
+@import 'brands/tokens';
+@import '../../styles.scss';
+
 .prospect-table-header {
-  padding: 12px;
+  padding: $space-m;
   div {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
+    @extend .medium-label-font;
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #8a8a8a;
+    color: $color-label-title;
   }
 }
 
 .prospect-table-sub-header {
   div {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 20px;
+    @extend .small-label-font;
+    font-size: $font-size-s;
+    line-height: $line-height-s;
     text-align: center;
     text-transform: uppercase;
-    color: #8a8a8a;
+    color: $color-label-title;
   }
 }
 
@@ -29,7 +28,7 @@
 }
 
 .cdk-drag-preview {
-  border: 1px solid #65a2f7;
+  border: 1px solid $color-border-blue;
 }
 
 .cdk-drag-placeholder {
