@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "gh-pages-build": "ng build --prod --base-href https://mistrykaran91.github.io/talent-portal/",
-    "gh-pages-deploy": "ng deploy --base-href https://mistrykaran91.github.io/talent-portal/",
+    "gh-pages-deploy": "ngh --dir=dist/talent-portal",
     "gh-pages-prod-deploy": "npm run gh-pages-build && npm run gh-pages-deploy "
   },
   "private": true,
@@ -36,7 +36,7 @@
     "@angular/compiler-cli": "~11.2.7",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
-    "angular-cli-ghpages": "^1.0.3",
+    "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
