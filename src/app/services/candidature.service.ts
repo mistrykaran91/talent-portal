@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Candidature } from '../models/candidature.model';
-import { catchError, debounceTime, map, shareReplay, switchMap, tap } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 
 @Injectable({
@@ -13,6 +13,10 @@ export class CandidatureService {
   constructor(private http: HttpClient) {}
 
   allCandidature$ = this.http.get<Candidature[]>(this.candidatureUrl).pipe(catchError(this.handleError));
+
+  updateComment(candidature: Partial<Candidature>) {
+    // In real world app, we will some api to patch the record.
+  }
 
   private handleError(err: any): Observable<never> {
     // in a real world app, we may send the server to some remote logging infrastructure

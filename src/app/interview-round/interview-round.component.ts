@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { InterviewRoundIconTextMap } from '../models/interview-round-icon-text.map';
 import { InterviewRound } from '../models/interview-round.model';
 
 @Component({
   selector: 'app-interview-round',
   templateUrl: './interview-round.component.html',
-  styleUrls: ['./interview-round.component.scss']
+  styleUrls: ['./interview-round.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InterviewRoundComponent {
   @Input()

@@ -1,10 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { PersonalInformation } from '../models/personal-information.model';
 
 @Component({
   selector: 'app-personal-information',
   templateUrl: './personal-information.component.html',
-  styleUrls: ['./personal-information.component.scss']
+  styleUrls: ['./personal-information.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PersonalInformationComponent {
   @Input()

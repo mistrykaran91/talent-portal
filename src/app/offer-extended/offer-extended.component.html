@@ -60,26 +60,29 @@
         </div>
       </div>
     </div>
+
+    <mat-menu #joiningStatusList="matMenu">
+      <button mat-menu-item class="mat-icon-button">
+        <mat-icon svgIcon="good"></mat-icon>
+      </button>
+      <mat-divider></mat-divider>
+  
+      <button mat-menu-item class="mat-icon-button">
+        <mat-icon svgIcon="average"></mat-icon>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item class="mat-icon-button">
+        <mat-icon svgIcon="rework"></mat-icon>
+      </button>
+    </mat-menu>
+  
+    <mat-menu #moreOption="matMenu">
+      <button mat-menu-item (click)="OnEditComment(candidature)">EDIT COMMENT</button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item>HIDE CANDIDATE</button>
+    </mat-menu>
+
   </div>
 
-  <mat-menu #joiningStatusList="matMenu">
-    <button mat-menu-item class="mat-icon-button">
-      <mat-icon svgIcon="good"></mat-icon>
-    </button>
-    <mat-divider></mat-divider>
-
-    <button mat-menu-item class="mat-icon-button">
-      <mat-icon svgIcon="average"></mat-icon>
-    </button>
-    <mat-divider></mat-divider>
-    <button mat-menu-item class="mat-icon-button">
-      <mat-icon svgIcon="rework"></mat-icon>
-    </button>
-  </mat-menu>
-
-  <mat-menu #moreOption="matMenu">
-    <button mat-menu-item>EDIT COMMENT</button>
-    <mat-divider></mat-divider>
-    <button mat-menu-item>HIDE CANDIDATE</button>
-  </mat-menu>
+  
 </div>

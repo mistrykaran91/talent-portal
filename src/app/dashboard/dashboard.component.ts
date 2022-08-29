@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { filter, map } from 'rxjs/operators';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { map } from 'rxjs/operators';
 import { CandidateStatus } from '../enums/candidate-status.enum';
 import { CandidatureService } from '../services/candidature.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent {
   allCandidature$ = this.candidatureService.allCandidature$;

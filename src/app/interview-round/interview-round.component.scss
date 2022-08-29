@@ -1,10 +1,15 @@
 @import 'brands/tokens';
 
-.font-12 {
-  font-size: $font-size-s;
-}
-
 :host {
   text-align: center;
   border-right: 1px solid $color-border-gray-2;
+}
+
+mat-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.font-12 {
+  font-size: $font-size-s;
 }
